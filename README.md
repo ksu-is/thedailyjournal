@@ -22,4 +22,4 @@ Ideas Thrown at the DartBoard Blindly (No Promise):
 - [ ] 3. Sentiment Analysis to show text mood.
 - [ ] 4. Quick google bar to efficiently explore ideas.
 
-Lastly I will be the only one using 
+Lastly I, Aleksandr Yeger will be the only one working on this project.
