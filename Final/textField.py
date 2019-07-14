@@ -1,17 +1,23 @@
-import tkinter as tk
+from tkinter import *
 
-class textField:
+class dailyJournal(Frame):
 
-    root = tk.Tk()
-    S = tk.Scrollbar(root)
-    vget = root.winfo_screenheight()
-    print("Screen Height:",vget, "(Used for textbox height.)")
-    T = tk.Text(root, height=vget, width=80)
-    S.pack(side=tk.RIGHT, fill=tk.Y)
-    T.pack()
-    S.config(command=T.yview)
-    T.config(yscrollcommand=S.set)
-    T.insert(tk.END, "")
+    def __init__(self,master):
 
-textField()
-tk.mainloop()
+        Frame.__init__(self,master)
+
+
+        self.grid()
+        self.t1 = Text(width=32, font=("Brush Script MT",25))
+        self.t1.grid(row = 0,column=0)
+
+        self.t1 = Text(width=32, font=("Brush Script MT",25))
+        self.t1.grid(row = 0,column=1)
+
+        self.t1 = Text(width=32, font=("Brush Script MT",25))
+        self.t1.grid(row = 0,column=2)
+        
+root = Tk()
+app = dailyJournal(root)
+root.geometry()
+root.mainloop()
