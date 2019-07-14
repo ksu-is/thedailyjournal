@@ -5,7 +5,7 @@ For the longest time I’ve been trying to get into the habit of writing daily b
 
 Approach for Making the Program
 - [x] 1. Mess Around with Tkinter and Create a Frame to Hold the Program.
-- [ ] 2. Add a Text Input Field for User Input
+- [x] 2. Add a Text Input Field for User Input
 - [ ] 3. Form a Directory for Where the Entries Will go.
 - [ ] 4. Make a Way to Access Previous Entries.
 - [ ] 5.Connect each entry with a time and date stamp.
