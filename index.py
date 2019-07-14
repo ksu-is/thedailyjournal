@@ -11,7 +11,7 @@ class textField:
     T.pack()
     S.config(command=T.yview)
     T.config(yscrollcommand=S.set)
-    T.insert(tk.END, "Shalone")
+    T.insert(tk.END, "")
 
 textField()
 tk.mainloop()
