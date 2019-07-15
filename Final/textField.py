@@ -1,5 +1,5 @@
 from tkinter import *
-from tkinter import font, SUNKEN
+from tkinter import font, SUNKEN 
 
 class dailyJournal(Frame):
 
@@ -21,6 +21,14 @@ class dailyJournal(Frame):
 
         self.titletag = Label(master, text = "Entry Title: ", relief = SUNKEN, font = ("Times", 14)).grid(row= 0, column = 0, sticky=NE)
         self.titleentry = Entry(master, font=("Courier", 14),).grid(row = 0, column = 1, ipadx = 164)
+
+
+        menu = Menu(root)
+        menu.add_command(label="New")
+        menu.add_command(label="Save")
+        menu.add_command(label="Save As")
+        menu.add_command(label="Open")
+        root.config(menu=menu)
 
 root = Tk()
 app = dailyJournal(root)
