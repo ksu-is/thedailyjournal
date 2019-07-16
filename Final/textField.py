@@ -1,5 +1,5 @@
 from tkinter import *
-from tkinter import font, SUNKEN 
+from tkinter import font, SUNKEN, Scrollbar
 
 class dailyJournal(Frame):
 
@@ -9,14 +9,18 @@ class dailyJournal(Frame):
 
 
         self.grid()
-        self.t1 = Text(width=50, font=("Courier",14))
-        self.t1.grid(row = 1,column=0)
+        self.t2 = Text(width=50, font=("Courier",14))
+        self.t2.grid(row = 1,column=0, sticky = N + S + E + W)
 
         self.t1 = Text(width=50, font=("Courier",14))
-        self.t1.grid(row = 1,column=1)
+        self.t1.grid(row = 1,column=1, sticky = N + S + E + W)
 
-        self.t1 = Text(width=50, font=("Courier",14))
-        self.t1.grid(row = 1,column=2)
+        self.scrollbar = Scrollbar(root)
+        self.scrollbar.grid(row= 1,column = 1, sticky = N + S + E)
+        self.scrollbar.config(command = self.t1.yview)
+
+        self.t3 = Text(width=50, font=("Courier",14))
+        self.t3.grid(row = 1,column=2, sticky = N + S + E + W)
 
 
         self.titletag = Label(master, text = "Entry Title: ", relief = SUNKEN, font = ("Times", 14)).grid(row= 0, column = 0, sticky=NE)
