@@ -6,3 +6,4 @@
                           https://www.python-course.eu/tkinter_text_widget.php
                           https://www.python-course.eu/tkinter_layout_management.php
                           https://stackoverflow.com/questions/43358304/tkinter-text-widget-save-to-file
+                          https://www.geeksforgeeks.org/make-notepad-using-tkinter/
