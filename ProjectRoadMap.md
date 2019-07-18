@@ -1,19 +1,22 @@
 Approach for Making the Program, Aleksandr Yeger's Tasks
 - [x] 1. Mess Around with Tkinter and Create a Frame to Hold the Program.
-    -Find the necessary code to create a container to hold the widgets planned for the program.
-- [x] 2. Add a Text Input Field for User Input
-    -Use the container and create a text field within it for user journal entry.
-- [ ] 3. Form a Directory for Where the Entries Will go.
-    -Program a save function for file storage in the user's chosen location.
-- [ ] 4. Make a Way to Access Previous Entries.
-    -Program a open function for previous file opening from the user's chosen location.
-- [ ] 5.Add a search bar to efficiently google things.
-    -Add a search bar near the text field so the user can efficiently research on-mind topics.
-- [ ] 6.Give the user options to customize the UI (Colors Etc.)
-    -Give the user copy,cut,paste utilization to give easy-of-access for forms of text.
-- [ ] 7.Formulate code revision.
-    -Try to make the code simpler and easier to revise by adding comments.
-
+-Find the necessary code to create a container to hold the widgets planned for the program.
+- [x] 3. Add a Text Input Field for User Input
+-Use the container and create a text field within it for user journal entry.
+- [ ] 4. Form a Directory for Where the Entries Will go.
+-Program a save function for file storage in the user's chosen location.
+- [ ] 5. Make a Way to Access Previous Entries.
+-Program a open function for previous file opening from the user's chosen location.
+- [ ] 6.Add a search bar to efficiently google things.
+-Add a search bar near the text field so the user can efficiently research on-mind topics.
+- [ ] 7.Give the user options to customize the UI (Colors Etc.)
+-Give the user copy,cut,paste utilization to give easy-of-access for forms of text.
+- [ ] 8.Formulate code revision.
+-Try to make the code simpler and easier to revise by adding comments.
+- [ ] 9.Review Code 
+-Make sure the program works and meets the goals of the project.
+- [ ] 10. Submit Code
+-Turn in the project through commitment to the master. Do a final review.
 
 
 
