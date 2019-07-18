@@ -13,7 +13,7 @@ Approach for Making the Program, Aleksandr Yeger's Tasks
 -Give the user copy,cut,paste utilization to give easy-of-access for forms of text.
 - [ ] 8.Formulate code revision.
 -Try to make the code simpler and easier to revise by adding comments.
-- [ ] 9.Review Code 
+- [ ] 9.Review Code QA Testing
 -Make sure the program works and meets the goals of the project.
 - [ ] 10. Submit Code
 -Turn in the project through commitment to the master. Do a final review.
