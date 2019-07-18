@@ -1,32 +1,20 @@
-import tkinter
+import tkinter as tk
 
-import ttkcalendar
-import tkSimpleDialog
-
-class CalendarDialog(tkSimpleDialog.Dialog):
-    """Dialog box that displays a calendar and returns the selected date"""
-    def body(self, master):
-        self.calendar = ttkcalendar.Calendar(master)
-        self.calendar.pack()
-
-    def apply(self):
-        self.result = self.calendar.selection
-
-# Demo code:
-def main():
-    root = Tkinter.Tk()
-    root.wm_title("CalendarDialog Demo")
-
-    def onclick():
-        cd = CalendarDialog(root)
-        print (cd.result)
-
-    button = Tkinter.Button(root, text="Click me to see a calendar!", command=onclick)
-    button.pack()
-    root.update()
-
-    root.mainloop()
-
-
-if __name__ == "__main__":
-    main()
+root = tk.Tk()
+S = tk.Scrollbar(root)
+T = tk.Text(root, height=4, width=50)
+S.pack(side=tk.RIGHT, fill=tk.Y)
+T.pack(side=tk.LEFT, fill=tk.Y)
+S.config(command=T.yview)
+T.config(yscrollcommand=S.set)
+quote = """HAMLET: To be, or not to be--that is the question:
+Whether 'tis nobler in the mind to suffer
+The slings and arrows of outrageous fortune
+Or to take arms against a sea of troubles
+And by opposing end them. To die, to sleep--
+No more--and by a sleep to say we end
+The heartache, and the thousand natural shocks
+That flesh is heir to. 'Tis a consummation
+Devoutly to be wished."""
+T.insert(tk.END, quote)
+tk.mainloop()

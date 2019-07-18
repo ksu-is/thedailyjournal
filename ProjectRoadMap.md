@@ -1,0 +1,30 @@
+Approach for Making the Program, Aleksandr Yeger's Tasks
+- [x] 1. Mess Around with Tkinter and Create a Frame to Hold the Program.
+    -Find the necessary code to create a container to hold the widgets planned for the program.
+- [x] 2. Add a Text Input Field for User Input
+    -Use the container and create a text field within it for user journal entry.
+- [ ] 3. Form a Directory for Where the Entries Will go.
+    -Program a save function for file storage in the user's chosen location.
+- [ ] 4. Make a Way to Access Previous Entries.
+    -Program a open function for previous file opening from the user's chosen location.
+- [ ] 5.Add a search bar to efficiently google things.
+    -Add a search bar near the text field so the user can efficiently research on-mind topics.
+- [ ] 6.Give the user options to customize the UI (Colors Etc.)
+    -Give the user copy,cut,paste utilization to give easy-of-access for forms of text.
+- [ ] 7.Formulate code revision.
+    -Try to make the code simpler and easier to revise by adding comments.
+
+
+
+
+
+** Reference Date: 7/13/2019 - 7/22/2019
+
+- Referenced CalcGUIModified.py for Tkinter method: Importing Tkinter and Initializing Frame.
+- Tkinter Reference used: 
+-                         https://python-textbok.readthedocs.io/en/1.0/Introduction_to_GUI_Programming.html
+                          https://www.python-course.eu/tkinter_text_widget.php
+                          https://www.python-course.eu/tkinter_layout_management.php
+                          https://stackoverflow.com/questions/43358304/tkinter-text-widget-save-to-file
+                          https://www.geeksforgeeks.org/make-notepad-using-tkinter/
+                          https://docs.python.org/3/library/tkinter.html
