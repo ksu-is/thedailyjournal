@@ -60,5 +60,13 @@ class Journal:
         self.helpmenu.add_command(label="About Journal", command=self.showabout)
 
         self.menubar.add_cascade(label="Help", menu=self.helpmenu)
+
+        self.root.config(menu=self.menubar)
+
+        self.scrollbar.pack(side=RIGHT, fill=Y)
+
+        self.scrollbar.config(command=self.textarea.yview)
+        self.textarea.config(yscrollcommand=self.scrollbar.set)
+        
 journal = Journal(width=800,height=600)
 journal.run()
