@@ -40,5 +40,25 @@ class Journal:
 
         self.textarea.grid(sticky = N + E + S + W)
 
+        self.filemenu.add_command(label="New", command=self.newfile)
+
+        self.filemenu.add_command(label="Open", command=self.openfile)
+
+        self.filemeny.add_command(label="Save", command=self.savefile)
+
+        self.filemenu.add_separator()
+        self.filemenu.add_command(label="Exit", command=self.quitapplication)
+
+        self.menubar.add_cascade(lavel="File", menu=self.filemenu)
+
+        self.editmenu.add_command(label="Copy", command=self.copyselection)
+
+        self.editmenu.add_command(label="Paste", command=self.pasteselection)
+
+        self.menubar.add_cascade(label="Edit", menu=self.editmenu)
+
+        self.helpmenu.add_command(label="About Journal", command=self.showabout)
+
+        self.menubar.add_cascade(label="Help", menu=self.helpmenu)
 journal = Journal(width=800,height=600)
 journal.run()
