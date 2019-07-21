@@ -33,7 +33,7 @@ class Journal:
 
         aligntop = (screenHeight /2) - (self.windowheight /2)
 
-        self.root.geometry('%dx%dx+%dx%dx' % (self.windowwidth, self.windowheight, alignleft, aligntop))
+        self.root.geometry('%dx%d+%d+%d' % (self.windowwidth, self.windowheight, alignleft, aligntop))
         
         self.root.grid_rowconfigure(0, weight=1)
         self.root.grid_columnconfigure(0, weight=1)
@@ -44,12 +44,12 @@ class Journal:
 
         self.filemenu.add_command(label="Open", command=self.openfile)
 
-        self.filemeny.add_command(label="Save", command=self.savefile)
+        self.filemenu.add_command(label="Save", command=self.savefile)
 
         self.filemenu.add_separator()
         self.filemenu.add_command(label="Exit", command=self.quitapplication)
 
-        self.menubar.add_cascade(lavel="File", menu=self.filemenu)
+        self.menubar.add_cascade(label="File", menu=self.filemenu)
 
         self.editmenu.add_command(label="Copy", command=self.copyselection)
 
@@ -72,7 +72,7 @@ class Journal:
         self.root.destroy()
     
     def showabout(self):
-        showinfo("Journal", "Build strong habits for a better you.")
+        showinfo("Journal", "Build strong habits for a better you. Coder: Aleksandr Yeger w/ References")
 
     def openfile(self):
         self.file = askopenfilename(defaultextension=".txt", filetypes=[("All Files","*.*"), ("Text Documents","*.txt")])
