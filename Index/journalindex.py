@@ -8,6 +8,8 @@ class Journal:
 
     root = Tk()
 
+
+    #base window dementions
     windowwidth = 800
     windowheight = 600
     textarea = Text(root)
@@ -16,30 +18,38 @@ class Journal:
     editmenu = Menu(menubar, tearoff=0)
     helpmenu = Menu(menubar, tearoff=0)
 
+    #for adding scrollbar later
     scrollbar = Scrollbar(textarea)
     file = None
 
     def __init__(self,**kwargs):
-
+        
+        #for setting the window dementions stated earlier
         self.windowwidth = kwargs['width']
         self.windowheight = kwargs['height']
 
+        #default window text
         self.root.title("Untitled - Journal Entry")
 
+        #centering the window at launch
         screenWidth = self.root.winfo_screenwidth()
         screenHeight = self.root.winfo_screenheight()
 
+        #left-aligning
         alignleft = (screenWidth / 2) - (self.windowwidth /2)
-
+        #right-aligning
         aligntop = (screenHeight /2) - (self.windowheight /2)
-
+        #top/bottom aligning
         self.root.geometry('%dx%d+%d+%d' % (self.windowwidth, self.windowheight, alignleft, aligntop))
         
+        #text area resizing alongside the window
         self.root.grid_rowconfigure(0, weight=1)
         self.root.grid_columnconfigure(0, weight=1)
 
+        #textarea control, stretch to window
         self.textarea.grid(sticky = N + E + S + W)
 
+        #formatting the function menu located on top of screen
         self.filemenu.add_command(label="New", command=self.newfile)
 
         self.filemenu.add_command(label="Open", command=self.openfile)
