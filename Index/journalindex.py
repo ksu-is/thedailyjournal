@@ -67,6 +67,66 @@ class Journal:
 
         self.scrollbar.config(command=self.textarea.yview)
         self.textarea.config(yscrollcommand=self.scrollbar.set)
+    
+    def quitapplication(self):
+        self.root.destroy()
+    
+    def showabout(self):
+        showinfo("Journal", "Build strong habits for a better you.")
+
+    def openfile(self):
+        self.file = askopenfilename(defaultextension=".txt", filetypes=[("All Files","*.*"), ("Text Documents","*.txt")])
+
+        if self.file == "":
+            self.file = None
+
+        else:
+            self.root.title(os.path.basename(self.file) + " - Journal")
+            self.textarea.delete(1.0,END)
+
+            file = open(self.file,"r")
+
+            file.close()
+
+    def newfile(self):
+        self.root.title("Untitled - Journal")
+        self.file = None
+        self.textarea.delete(1.0,END)
+
+    def savefile(self):
         
+        if self.file == None:
+            self.file = asksaveasfilename(initialfile="Untitled.txt", defaultextension=".txt", filetypes=[("All Files","*.*"),("Text Documents","*.txt")])
+
+            if self.file == "":
+                self.file = None
+            else:
+                file = open(self.file,"w")
+                file.write(self.textarea.get(1.0,END))
+                file.close()
+
+                self.root.title(os.path.basename(self.file) + " - Journal")
+
+        else:
+            file = open(self.file,"w")
+            file.write(self.textarea.get(1.0,END))
+            file.close()
+
+    def cutselection(self):
+        self.textarea.event_generate("<<Cut>>")
+
+    def copyselection(self):
+        self.textarea.event.generate("<<Copy>>")
+
+    def pasteselection(self):
+        self.textarea.event_generate("<<Paste>>")
+
+    def run(self):
+        self.root.mainloop()    
+
+
+
+
+
 journal = Journal(width=800,height=600)
 journal.run()
