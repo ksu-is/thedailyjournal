@@ -139,7 +139,7 @@ class Journal:
 
     #allows for ctrl+c selected text
     def copyselection(self):
-        self.textarea.event.generate("<<Copy>>")
+        self.textarea.event_generate("<<Copy>>")
 
     #allows for ctrl+v selected text
     def pasteselection(self):
