@@ -1,5 +1,6 @@
 import tkinter
 import os
+import webbrowser
 from tkinter import *
 from tkinter.messagebox import *
 from tkinter.filedialog import*
@@ -56,6 +57,7 @@ class Journal:
 
         self.filemenu.add_command(label="Save", command=self.savefile)
 
+        #small line to separate exit option
         self.filemenu.add_separator()
         self.filemenu.add_command(label="Exit", command=self.quitapplication)
 
@@ -67,6 +69,7 @@ class Journal:
 
         self.menubar.add_cascade(label="Edit", menu=self.editmenu)
 
+        #add info page for description
         self.helpmenu.add_command(label="About Journal", command=self.showabout)
 
         self.menubar.add_cascade(label="Help", menu=self.helpmenu)
@@ -75,15 +78,19 @@ class Journal:
 
         self.scrollbar.pack(side=RIGHT, fill=Y)
 
+        #allow the scrollbar to follow the text space
         self.scrollbar.config(command=self.textarea.yview)
         self.textarea.config(yscrollcommand=self.scrollbar.set)
     
+    #quits the application
     def quitapplication(self):
         self.root.destroy()
     
+    #holds the program description
     def showabout(self):
         showinfo("Journal", "Build strong habits for a better you. Coder: Aleksandr Yeger w/ References")
 
+    #opens dialog for choosing a file to open
     def openfile(self):
         self.file = askopenfilename(defaultextension=".txt", filetypes=[("All Files","*.*"), ("Text Documents","*.txt")])
 
@@ -98,11 +105,13 @@ class Journal:
 
             file.close()
 
+    #creates a blank journal
     def newfile(self):
         self.root.title("Untitled - Journal")
         self.file = None
         self.textarea.delete(1.0,END)
 
+    #saves current work, new file opens dialog
     def savefile(self):
         
         if self.file == None:
@@ -122,17 +131,22 @@ class Journal:
             file.write(self.textarea.get(1.0,END))
             file.close()
 
+    #allows for ctrl+x selected text
     def cutselection(self):
         self.textarea.event_generate("<<Cut>>")
 
+    #allows for ctrl+c selected text
     def copyselection(self):
         self.textarea.event.generate("<<Copy>>")
 
+    #allows for ctrl+v selected text
     def pasteselection(self):
         self.textarea.event_generate("<<Paste>>")
 
+    #ran to launch the program
     def run(self):
-        self.root.mainloop()    
+        self.root.mainloop()
+    
 
 
 
