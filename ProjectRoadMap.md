@@ -9,7 +9,7 @@ Approach for Making the Program, Aleksandr Yeger's Tasks
 - Program a save function for file storage in the user's chosen location.
 - [x] 5. Make a Way to Access Previous Entries.
 - Program a open function for previous file opening from the user's chosen location.
-- [ ] 6.Add a search bar to efficiently search things on the internet.
+- [x] 6.Add a search bar to efficiently search things on the internet.
 - Add a search bar near the text field so the user can efficiently research on-mind topics.
 - [x] 7.Give the user options to customize.
 - Give the user copy,cut,paste utilization to give easy-of-access for forms of text.

@@ -72,6 +72,8 @@ class Journal:
         #add info page for description
         self.helpmenu.add_command(label="About Journal", command=self.showabout)
 
+        self.helpmenu.add_command(label="Internet Search", command=self.searchbar)
+
         self.menubar.add_cascade(label="Help", menu=self.helpmenu)
 
         self.root.config(menu=self.menubar)
@@ -142,6 +144,24 @@ class Journal:
     #allows for ctrl+v selected text
     def pasteselection(self):
         self.textarea.event_generate("<<Paste>>")
+
+
+
+    def searchbar(self):
+        root = Tk()
+        frame = Frame(root)
+        frame.pack()
+
+        def OpenUrl():
+            webbrowser.open_new("." + url.get())
+
+        button = Button(frame, text="Search", command=OpenUrl)
+        button.pack()
+
+        url = tkinter.Entry(root)
+        url.pack()
+
+
 
     #ran to launch the program
     def run(self):
